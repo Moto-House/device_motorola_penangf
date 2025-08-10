@@ -88,6 +88,7 @@ PRODUCT_PACKAGES += \
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
+    hardware/mediatek \
     $(LOCAL_PATH)
 
 # Inherit the proprietary files
