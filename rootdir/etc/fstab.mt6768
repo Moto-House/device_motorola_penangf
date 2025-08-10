@@ -1,5 +1,5 @@
 # Mount points for system partitions
-/system            ext4  ro  wait,slotselect,avb=vbmeta_system,logical,first_stage_mount,avb_keys=/avb/q-gsi.avbpubkey:/avb/r-gsi.avbpubkey:/avb/s-gsi.avbpubkey
+/system            ext4  ro  wait,slotselect,avb=vbmeta_system,logical,first_stage_mount,avb_keys=/avb/q-developer-gsi.avbpubkey:/avb/r-developer-gsi.avbpubkey:/avb/s-developer-gsi.avbpubkey
 /system_ext        ext4  ro  wait,slotselect,avb=vbmeta_system,logical,first_stage_mount,avb_keys=/avb/q-gsi.avbpubkey:/avb/r-gsi.avbpubkey:/avb/s-gsi.avbpubkey
 /vendor            ext4  ro  wait,slotselect,avb,logical,first_stage_mount
 /product           ext4  ro  wait,slotselect,avb,logical,first_stage_mount
