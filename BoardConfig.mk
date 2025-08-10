@@ -25,6 +25,10 @@ TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a55
 TARGET_BOOTLOADER_BOARD_NAME := penangf
 TARGET_NO_BOOTLOADER := true
 
+# HIDL
+DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/configs/vintf/manifest.xml
+DEVICE_MATRIX_FILE := $(DEVICE_PATH)/configs/vintf/compatibility_matrix.xml
+
 # Platform
 TARGET_BOARD_PLATFORM := mt6768
 BOARD_HAS_MTK_HARDWARE := true
