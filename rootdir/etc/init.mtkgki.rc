@@ -1,0 +1,27 @@
+service insmod_sh /vendor/bin/init.insmod.sh /vendor/etc/init.insmod.${ro.hardware}.cfg
+    class main
+    user root
+    group root system
+    disabled
+    oneshot
+
+#Penang code for EKPENANG4GU-2889 by wuzhisen at 20240326 start
+# add taskset service
+service taskset_sh /vendor/bin/init.taskset.sh
+    class main
+    user root
+    group root system
+    disabled
+    oneshot
+#Penang code for EKPENANG4GU-2889 by wuzhisen at 20240326 end
+
+on early-init
+    setprop vendor.all.modules.ready 0
+    write /proc/bootprof "modprobe: Load_Module_START"
+    start insmod_sh
+
+#Penang code for EKPENANG4GU-2889 by wuzhisen at 20240326 start
+# start taskset service
+on property:sys.boot_completed=1
+    start taskset_sh
+#Penang code for EKPENANG4GU-2889 by wuzhisen at 20240326 end

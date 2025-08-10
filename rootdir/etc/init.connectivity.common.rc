@@ -1,0 +1,124 @@
+# MTK connectivity .rc configure
+
+on post-fs-data
+
+
+#
+# Connectivity related device nodes & configuration (begin)
+#
+
+#/dev/ttyMT2 for Connectivity BT/FM/GPS usage
+    chmod 0660 /dev/ttyMT2
+    chown system system /dev/ttyMT2
+
+#/dev/ttyMT1 for GPS 3337 usage
+    chmod 0660 /dev/ttyMT1
+    chown system system /dev/ttyMT1
+
+# GPS
+    mkdir /data/vendor/gps 0770 gps system
+    mkdir /data/vendor/log 0770 gps system
+    mkdir /data/vendor/log/gps 0770 gps system
+
+# GPS EMI
+    chmod 0660 /dev/gps_emi
+
+# WiFi
+    mkdir /data/vendor/wifi 0770 wifi wifi
+    mkdir /data/vendor/wifi/wpa 0770 wifi wifi
+    mkdir /data/vendor/wifi/wpa/sockets 0770 wifi wifi
+
+# BT relayer mode used VCOM
+    chown bluetooth bluetooth /dev/ttyGS2
+    chmod 0660 /dev/ttyGS2
+
+#
+# Connectivity related device nodes & configuration (end)
+#
+
+
+on boot
+
+#
+# Connectivity related services (Begin)
+#
+# GPS
+service mnld /vendor/bin/mnld
+    class main
+    user gps
+    capabilities WAKE_ALARM
+    group gps inet misc sdcard_rw sdcard_r media_rw system radio wakelock
+    socket mnld stream 660 gps system
+
+# GPS Debug Process
+service lbs_dbg /system/bin/lbs_dbg
+    class main
+    user shell
+    group log system gps inet misc sdcard_rw sdcard_r media_rw radio
+    socket lbs_dbg stream 660 gps system
+
+on property:persist.vendor.em.dy.debug=1
+    stop lbs_dbg
+
+#service BGW /vendor/bin/BGW
+#    user system
+#    group gps system radio
+#    class main
+
+# Wlan
+#service wpa_supplicant /vendor/bin/hw/wpa_supplicant \
+#    -g@android:wpa_wlan0
+#    interface android.hardware.wifi.supplicant@1.0::ISupplicant default
+#    interface android.hardware.wifi.supplicant@1.1::ISupplicant default
+#    interface android.hardware.wifi.supplicant@1.2::ISupplicant default
+#    interface android.hardware.wifi.supplicant@1.3::ISupplicant default
+#    socket wpa_wlan0 dgram 660 wifi wifi
+#    class main
+#    disabled
+#    oneshot
+
+# add for wifi sar scenario
+on property:sys.power.scenario=*
+    start vendor.powersar
+
+service vendor.powersar /vendor/bin/wpa_cli_moto driver SET_PWR_CTRL MySAR ${sys.power.scenario}
+    class main
+    user root
+    group root wifi net_admin net_raw
+    disabled
+    oneshot
+
+on property:sys.power.scenario.ap=5
+    start enable_apsar
+
+on property:sys.power.scenario.ap=0
+    start recovery_apsar
+
+service enable_apsar /vendor/bin/iwpriv_moto ap0 driver "set_pwr_ctrl MySAR 5"
+    class main
+    user wifi
+    group wifi net_raw net_admin
+    disabled
+    oneshot
+
+service recovery_apsar /vendor/bin/iwpriv_moto ap0 driver "set_pwr_ctrl MySAR 0"
+    class main
+    user wifi
+    group wifi net_raw net_admin
+    disabled
+    oneshot
+
+on property:sys.power.scenario.ap=10
+    start set_apsar_ten
+
+service set_apsar_ten /vendor/bin/iwpriv_moto ap0 driver "set_pwr_ctrl MySAR 10"
+    class main
+    user wifi
+    group wifi net_raw net_admin
+    disabled
+    oneshot
+
+#
+# Connectivity related services (End)
+#
+

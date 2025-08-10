@@ -1,0 +1,7 @@
+on fs
+    chmod 0660 /dev/pn557
+    chown nfc nfc /dev/pn557
+
+on post-fs-data
+    mkdir /data/vendor/nfc 0770 nfc nfc
+    mkdir /data/vendor/nfc/param 0770 nfc nfc
