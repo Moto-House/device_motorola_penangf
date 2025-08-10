@@ -5,6 +5,7 @@
 #
 
 DEVICE_PATH := device/motorola/penangf
+KERNEL_PATH := device/motorola/penangf-kernel
 
 # Architecture
 TARGET_ARCH := arm64
@@ -28,6 +29,60 @@ TARGET_NO_BOOTLOADER := true
 # HIDL
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/configs/vintf/manifest.xml
 DEVICE_MATRIX_FILE := $(DEVICE_PATH)/configs/vintf/compatibility_matrix.xml
+
+# Kernel
+BOARD_KERNEL_BASE := 0x40078000
+BOARD_VENDOR_BASE := 0x40078000
+BOARD_KERNEL_PAGESIZE := 0x00001000
+BOARD_KERNEL_OFFSET := 0x00008000
+BOARD_RAMDISK_OFFSET := 0x07c08000
+BOARD_TAGS_OFFSET := 0x0bc08000
+BOARD_BOOT_HEADER_VERSION := 4
+BOARD_HEADER_SIZE := 2128
+BOARD_DTB_SIZE := 147804
+BOARD_DTB_OFFSET := 0x0bc08000
+
+TARGET_KERNEL_ARCH := arm64
+TARGET_KERNEL_HEADER_ARCH := arm64
+BOARD_RAMDISK_USE_LZ4 := true
+BOARD_INCLUDE_DTB_IN_BOOTIMG := true
+BOARD_USES_GENERIC_KERNEL_IMAGE := true
+
+BOARD_KERNEL_CMDLINE := bootopt=64S3,32N2,64N2
+
+BOARD_MKBOOTIMG_ARGS += \
+    --dtb_offset $(BOARD_TAGS_OFFSET) \
+    --header_version $(BOARD_BOOT_HEADER_VERSION) \
+    --kernel_offset $(BOARD_KERNEL_OFFSET) \
+    --ramdisk_offset $(BOARD_RAMDISK_OFFSET) \
+    --tags_offset $(BOARD_TAGS_OFFSET)
+
+BOARD_KERNEL_IMAGE_NAME := Image.gz
+
+TARGET_NO_KERNEL_OVERRIDE := true
+TARGET_KERNEL_SOURCE := device/motorola/penangf-kernel/kernel-headers
+
+LOCAL_KERNEL := $(KERNEL_PATH)/$(BOARD_KERNEL_IMAGE_NAME)
+PRODUCT_COPY_FILES += \
+	$(LOCAL_KERNEL):kernel
+
+BOARD_PREBUILT_DTBIMAGE_DIR := $(KERNEL_PATH)/dtb
+BOARD_MKBOOTIMG_ARGS += --dtb $(BOARD_PREBUILT_DTBIMAGE_DIR)/dtb.img
+
+## vendor_boot modules
+BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD := $(strip $(shell cat $(KERNEL_PATH)/modules.load.vendor_boot))
+BOARD_VENDOR_RAMDISK_KERNEL_MODULES := $(addprefix $(KERNEL_PATH)/vendor_ramdisk/, $(BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD))
+
+## recovery modules
+BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD := $(strip $(shell cat $(KERNEL_PATH)/modules.load.recovery))
+RECOVERY_MODULES := $(addprefix $(KERNEL_PATH)/vendor_ramdisk/, $(BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD))
+
+## Prevent duplicated entries (to solve duplicated build rules problem)
+BOARD_VENDOR_RAMDISK_KERNEL_MODULES := $(sort $(BOARD_VENDOR_RAMDISK_KERNEL_MODULES) $(RECOVERY_MODULES))
+
+## vendor modules
+BOARD_VENDOR_KERNEL_MODULES_LOAD := $(strip $(shell cat $(KERNEL_PATH)/modules.load.vendor))
+BOARD_VENDOR_KERNEL_MODULES := $(wildcard $(KERNEL_PATH)/vendor/*.ko)
 
 # Partitions
 AB_OTA_UPDATER := true
