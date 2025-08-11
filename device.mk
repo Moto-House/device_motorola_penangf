@@ -79,7 +79,6 @@ PRODUCT_PACKAGES += \
     init.ago.rc \
     init.cgroup.rc \
     init.connectivity.common.rc \
-    init.connectivity.rc \
     init.modem.rc \
     init.mt6768.rc \
     init.mt6768.usb.rc \
