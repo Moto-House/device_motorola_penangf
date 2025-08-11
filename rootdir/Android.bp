@@ -180,6 +180,13 @@ prebuilt_etc {
     vendor: true,
 }
 
+prebuilt_etc {
+    name: "ueventd.mt6768.rc",
+    filename: "ueventd.rc",
+    src: "etc/ueventd.mt6768.rc",
+    vendor: true,
+}
+
 // fstab
 prebuilt_etc {
     name: "fstab.mt6768",
