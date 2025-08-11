@@ -62,3 +62,5 @@
 /dev/block/by-name/gz2          /gz2      emmc  defaults  defaults
 /dev/block/by-name/spmfw        /spmfw    emmc  defaults  defaults
 /dev/block/by-name/boot_para    /boot_para emmc defaults  defaults
+/dev/block/zram0                none      swap defaults zramsize=55%
+
