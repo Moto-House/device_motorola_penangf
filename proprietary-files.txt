@@ -1719,14 +1719,12 @@ vendor/lib64/vendor.mediatek.hardware.mtkradioex@3.0.so
 vendor/bin/hw/android.hardware.sensors@2.0-service.multihal-mediatek
 vendor/etc/init/android.hardware.sensors@2.0-service.multihal-mediatek.rc
 vendor/lib/libhwm.so
-vendor/lib/libsensorndkbridge.so
 vendor/lib64/hw/sensors.mt6768.so
 vendor/lib64/libQstAlgo.so
 vendor/lib64/libhwm.so
 vendor/lib64/libksensor.so
 vendor/lib64/libmmc5603.so
 vendor/lib64/libsensor_custom.so
-vendor/lib64/libsensorndkbridge.so
 
 # Thermal
 vendor/bin/hw/android.hardware.thermal@2.0-service.mtk
