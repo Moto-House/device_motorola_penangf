@@ -801,10 +801,8 @@ vendor/lib/libconnfem.so
 vendor/lib64/libconnfem.so
 
 # Display
-vendor/bin/hw/android.hardware.graphics.composer@2.1-service
 vendor/bin/hw/vendor.mediatek.hardware.pq@2.2-service
 vendor/etc/init/android.hardware.graphics.allocator@4.0-service-mediatek.rc
-vendor/etc/init/android.hardware.graphics.composer@2.1-service.rc
 vendor/etc/init/vendor.mediatek.hardware.pq@2.2-service.rc
 vendor/lib/hw/gralloc.default.so
 vendor/lib/libaal_key.so
