@@ -1053,10 +1053,7 @@ vendor/lib64/libpqparamparser.so
 
 # Health
 vendor/bin/fuelgauged
-vendor/bin/hw/android.hardware.health@2.1-service
-vendor/etc/init/android.hardware.health@2.1-service.rc
 vendor/etc/init/fuelgauged_init.rc
-vendor/etc/vintf/manifest/android.hardware.health@2.1.xml
 vendor/lib/libfgauge_gm30.so
 vendor/lib64/libfgauge_gm30.so
 
