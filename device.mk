@@ -81,6 +81,9 @@ PRODUCT_PACKAGES += \
     libaudiofoundation.vendor \
     libtinycompress
 
+PRODUCT_PACKAGES += \
+    BesLoudness
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio/audio_device.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_device.xml \
     $(LOCAL_PATH)/configs/audio/audio_device_dm_aw.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_device_dm_aw.xml \
