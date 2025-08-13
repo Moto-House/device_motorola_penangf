@@ -1383,7 +1383,6 @@ vendor/bin/gsm0710muxd
 vendor/bin/ipsec_mon
 vendor/bin/md_monitor
 vendor/bin/md_monitor_ctrl
-vendor/bin/meta_tst
 vendor/bin/muxreport
 vendor/etc/apdb/APDB_MT6768_S01__W2352
 vendor/etc/apdb/APDB_MT6768_S01__W2352_ENUM
