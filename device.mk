@@ -394,7 +394,6 @@ PRODUCT_PACKAGES += \
     android.hardware.vibrator-service.mediatek
 
 # VNDK
-NEED_AIDL_NDK_PLATFORM_BACKEND := true
 PRODUCT_PACKAGES += \
     vndservicemanager
 
