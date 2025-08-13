@@ -1614,15 +1614,6 @@ vendor/bin/hw/android.hardware.usb@1.2-service-mediatekv2
 vendor/etc/init/android.hardware.usb@1.2-service-mediatekv2.rc
 vendor/etc/vintf/manifest/android.hardware.usb@1.2-service-mediatekv2.xml
 
-# Vibrator
-vendor/bin/hw/android.hardware.vibrator-service.mediatek
-vendor/etc/init/vibrator-mtk-default.rc
-vendor/etc/vintf/manifest/vibrator-mtk-default.xml
-vendor/lib/hw/vibrator.default.so
-vendor/lib/hw/vibrator.mt6768.so
-vendor/lib64/hw/vibrator.default.so
-vendor/lib64/hw/vibrator.mt6768.so
-
 # WiFi
 vendor/bin/stp_dump3
 vendor/bin/wfca
