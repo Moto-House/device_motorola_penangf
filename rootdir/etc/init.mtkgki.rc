@@ -25,3 +25,30 @@ on early-init
 on property:sys.boot_completed=1
     start taskset_sh
 #Penang code for EKPENANG4GU-2889 by wuzhisen at 20240326 end
+
+# load bt_drv
+on property:vendor.connsys.driver.ready=yes
+  insmod /vendor/lib/modules/bt_drv_${ro.vendor.bt.platform}.ko
+  chown bluetooth bluetooth /proc/driver/bt_dbg
+on property:vendor.connsys.driver.ready=no
+  insmod /vendor/lib/modules/bt_drv_${ro.vendor.bt.platform}.ko
+  chown bluetooth bluetooth /proc/driver/bt_dbg
+
+# Connectivity drivers
+on boot
+    insmod /vendor/lib/modules/wmt_drv.ko
+    insmod /vendor/lib/modules/connfem.ko
+
+# load wifi driver after wmt_loader finish
+on property:vendor.connsys.driver.ready=yes
+  insmod /vendor/lib/modules/${ro.vendor.wlan.chrdev}.ko
+  insmod /vendor/lib/modules/wlan_drv_${ro.vendor.wlan.gen}.ko
+  start wlan_assistant
+
+# load fmradio_drv
+on property:vendor.connsys.driver.ready=yes
+  insmod /vendor/lib/modules/fmradio_drv_${ro.vendor.fm.platform}.ko
+
+# load gps_drv
+on property:vendor.connsys.driver.ready=yes
+  insmod /vendor/lib/modules/${ro.vendor.gps.chrdev}.ko
