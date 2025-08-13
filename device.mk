@@ -337,6 +337,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libsensorndkbridge
 
+PRODUCT_PACKAGES += \
+    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/sensors/,$(TARGET_COPY_OUT_VENDOR)/etc/sensors)
+
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     hardware/mediatek \
