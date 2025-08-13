@@ -338,10 +338,10 @@ PRODUCT_PACKAGES += \
     init.SNxxx.se.rc \
     init.aee.rc \
     init.ago.rc \
-    init.cgroup.rc \
     init.connectivity.common.rc \
     init.modem.rc \
     init.mt6768.rc \
+    init.mt6768.power.rc \
     init.mt6768.usb.rc \
     init.mtkgki.rc \
     init.project.rc \
