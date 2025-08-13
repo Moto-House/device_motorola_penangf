@@ -968,6 +968,12 @@ vendor/firmware/soc1_0_ram_wifi_1a_1_hdr.bin
 vendor/firmware/txpowerctrl.cfg
 vendor/firmware/wifi.cfg
 
+# Firmware (recovery)
+vendor/firmware/ICNL9916.bin:recovery/root/vendor/firmware/ICNL9916.bin
+vendor/firmware/ILITEK_FW_TM.bin:recovery/root/vendor/firmware/ILITEK_FW_TM.bin
+vendor/firmware/ILITEK_FW_TXD.bin:recovery/root/vendor/firmware/ILITEK_FW_TXD.bin
+vendor/firmware/hdl_boe_firmware.img:recovery/root/vendor/firmware/hdl_boe_firmware.img
+
 # GPS
 vendor/bin/hw/android.hardware.gnss-service.mediatek
 vendor/bin/mnld
