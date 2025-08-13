@@ -23,13 +23,11 @@ vendor/lib/audioclient-types-aidl-cpp.so
 vendor/lib/framework-permission-aidl-cpp.so
 vendor/lib/hw/audio.primary.mt6768.so
 vendor/lib/hw/audio.r_submix.mt6768.so
-vendor/lib/hw/audio_policy.stub.so
 vendor/lib/libMtkSpeechEnh.so
 vendor/lib/lib_iir.so
 vendor/lib/lib_speech_enh.so
 vendor/lib/libalsautils.so
 vendor/lib/libaudio_param_parser-vnd.so
-vendor/lib/libaudioclient_aidl_conversion.so
 vendor/lib/libaudiocompensationfilter_vendor.so
 vendor/lib/libaudiocompensationfilterc.so
 vendor/lib/libaudiocomponentengine_vendor.so
@@ -59,18 +57,13 @@ vendor/lib/vendor.mediatek.hardware.audio@7.1.so
 vendor/lib64/audio_common-aidl-cpp.so
 vendor/lib64/audioclient-types-aidl-cpp.so
 vendor/lib64/framework-permission-aidl-cpp.so
-vendor/lib64/hw/audio.primary.default.so
 vendor/lib64/hw/audio.primary.mt6768.so
-vendor/lib64/hw/audio.r_submix.default.so
 vendor/lib64/hw/audio.r_submix.mt6768.so
-vendor/lib64/hw/audio.usb.default.so
-vendor/lib64/hw/audio_policy.stub.so
 vendor/lib64/libMtkSpeechEnh.so
 vendor/lib64/lib_iir.so
 vendor/lib64/lib_speech_enh.so
 vendor/lib64/libalsautils.so
 vendor/lib64/libaudio_param_parser-vnd.so
-vendor/lib64/libaudioclient_aidl_conversion.so
 vendor/lib64/libaudiocompensationfilter_vendor.so
 vendor/lib64/libaudiocompensationfilterc.so
 vendor/lib64/libaudiocomponentengine_vendor.so
@@ -788,7 +781,6 @@ vendor/lib64/libconnfem.so
 vendor/bin/hw/vendor.mediatek.hardware.pq@2.2-service
 vendor/etc/init/android.hardware.graphics.allocator@4.0-service-mediatek.rc
 vendor/etc/init/vendor.mediatek.hardware.pq@2.2-service.rc
-vendor/lib/hw/gralloc.default.so
 vendor/lib/libaal_key.so
 vendor/lib/libflatbuffers-cpp.so
 vendor/lib/libged.so
@@ -821,7 +813,6 @@ vendor/lib/vendor.mediatek.hardware.pq@2.6.so
 vendor/lib/vendor.mediatek.hardware.pq@2.7.so
 vendor/lib/vendor.mediatek.hardware.pq@2.8.so
 vendor/lib/vendor.mediatek.hardware.pq@2.9.so
-vendor/lib64/hw/gralloc.default.so
 vendor/lib64/libaal_key.so
 vendor/lib64/libcomposer_ext.so
 vendor/lib64/libflatbuffers-cpp.so
@@ -1110,12 +1101,10 @@ vendor/lib/vendor.mediatek.hardware.keymaster_attestation@1.1.so
 vendor/lib64/hw/kmsetkey.default.so
 vendor/lib64/hw/kmsetkey.trustonic.so
 vendor/lib64/hw/vendor.mediatek.hardware.keymaster_attestation@1.1-impl.so
-vendor/lib64/libcppcose_rkp.so
 vendor/lib64/libkeymaster4.so
 vendor/lib64/libkeymaster41.so
 vendor/lib64/libkeymaster4_1support.so
 vendor/lib64/libkmsetkey.so
-vendor/lib64/libsoft_attestation_cert.so
 vendor/lib64/vendor.mediatek.hardware.keymaster_attestation@1.0.so
 vendor/lib64/vendor.mediatek.hardware.keymaster_attestation@1.1.so
 
@@ -1249,20 +1238,16 @@ vendor/etc/wfd_source_capability.csv
 vendor/lib/libdapparamstorage.so
 vendor/lib/libdynamiclog.so
 vendor/lib/libminiui.so
-vendor/lib/libruy.so
 vendor/lib/libthha.so
 vendor/lib64/jcos_client.so
 vendor/lib64/libBSTSWAD.so
 vendor/lib64/libBSTbase_share.so
 vendor/lib64/libPenang4G_oem.so
-vendor/lib64/libbinderdebug.so
 vendor/lib64/libdapparamstorage.so
 vendor/lib64/libdeccfg.so
 vendor/lib64/libdynamiclog.so
 vendor/lib64/libfft_vendor.so
 vendor/lib64/libminiui.so
-vendor/lib64/libruy.so
-vendor/lib64/libz_stable.so
 vendor/lib64/offline_processor
 vendor/lib64/se_extn_client.so
 vendor/lib64/yuv_convert
@@ -1297,7 +1282,6 @@ vendor/lib/libneuropilot_hal_utils.so
 vendor/lib/libnir_neon_driver.so
 vendor/lib/libnir_neon_driver_ndk.mtk.vndk.so
 vendor/lib/libtflite_mtk.so
-vendor/lib/libvpx.so
 vendor/lib/mt6768/libnir_neon_driver.so
 vendor/lib/vendor.mediatek.hardware.apmonitor@2.0.so
 vendor/lib64/libapu_mdw.so
@@ -1319,24 +1303,17 @@ vendor/lib64/mt6768/libnir_neon_driver.so
 # NFC
 vendor/bin/hw/android.hardware.nfc_snxxx@1.2-service
 vendor/bin/hw/android.hardware.secure_element@1.2-service-mediatek
-vendor/bin/hw/android.hardware.secure_element_snxxx@1.2-service
 vendor/etc/init/android.hardware.nfc_snxxx@1.2-service.rc
 vendor/etc/init/android.hardware.secure_element@1.2-service-mediatek.rc
-vendor/etc/init/android.hardware.secure_element_snxxx@1.2-service.rc
 vendor/etc/libese-nxp.conf
 vendor/etc/libnfc-nci.conf
 vendor/etc/libnfc-nxp.conf
 vendor/etc/libnfc-nxp_RF.conf
 vendor/lib/hw/android.hardware.nfc@1.0-impl.so
-vendor/lib/libnxp_extamp_intf.so
-vendor/lib64/ese_spi_nxp_snxxx.so
 vendor/lib64/hw/android.hardware.nfc@1.0-impl.so
-vendor/lib64/libnxp_extamp_intf.so
 vendor/lib64/libpn557_fw.so
 vendor/lib64/ls_client.so
 vendor/lib64/nfc_nci_nxp_snxxx.so
-vendor/lib64/vendor.nxp.nxpese@1.0.so
-vendor/lib64/vendor.nxp.nxpnfc@2.0.so
 
 # NVRAM
 vendor/bin/fuelgauged_nvram
@@ -1643,10 +1620,8 @@ vendor/etc/init/vibrator-mtk-default.rc
 vendor/etc/vintf/manifest/vibrator-mtk-default.xml
 vendor/lib/hw/vibrator.default.so
 vendor/lib/hw/vibrator.mt6768.so
-vendor/lib/libvibrator.so
 vendor/lib64/hw/vibrator.default.so
 vendor/lib64/hw/vibrator.mt6768.so
-vendor/lib64/libvibrator.so
 
 # WiFi
 vendor/bin/stp_dump3
