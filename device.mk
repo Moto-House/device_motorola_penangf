@@ -177,6 +177,8 @@ PRODUCT_PACKAGES += \
 # Keymaster / Keymint
 PRODUCT_PACKAGES += \
     android.hardware.security.keymint-V1-ndk_platform.vendor \
+    android.hardware.security.secureclock-V1-ndk_platform.vendor \
+    android.hardware.security.sharedsecret-V1-ndk_platform.vendor \
     libkeymaster_messages.vendor:64 \
     libkeymaster_portable.vendor:64 \
     libkeymint.vendor:64 \
