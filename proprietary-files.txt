@@ -436,6 +436,7 @@ vendor/etc/audio_param/single/VolumeGainMap_AudioParam.xml
 vendor/etc/audio_param/single/VolumeGainMap_ParamUnitDesc.xml
 vendor/etc/audio_param/single/Volume_AudioParam.xml
 vendor/etc/audio_param/single/Volume_ParamUnitDesc.xml
+vendor/etc/default_volume_tables.xml
 
 # Audio (SoundFX)
 vendor/lib/soundfx/libdlbvol.so
