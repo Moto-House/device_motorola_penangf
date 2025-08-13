@@ -6,7 +6,7 @@
 
 # Metadata & Data
 /dev/block/by-name/md_udc       /metadata  ext4  noatime,nosuid,nodev,discard  wait,check,formattable,first_stage_mount
-/dev/block/by-name/userdata     /data      f2fs  noatime,nosuid,nodev,discard,noflush_merge,fsync_mode=nobarrier,reserve_root=134217,resgid=1065,inlinecrypt  wait,check,formattable,quota,latemount,resize,readahead_size_kb=512,reservedsize=128m,checkpoint=fs,fileencryption=aes-256-xts:aes-256-cts:v2,keydirectory=/metadata/vold/metadata_encryption
+/dev/block/by-name/userdata     /data      f2fs  noatime,nosuid,nodev,discard,noflush_merge,fsync_mode=nobarrier,reserve_root=134217,resgid=1065,inlinecrypt  wait,check,formattable,quota,latemount,readahead_size_kb=512,reservedsize=128m,checkpoint=fs,fileencryption=aes-256-xts:aes-256-cts:v2,keydirectory=/metadata/vold/metadata_encryption
 
 # Vendor-specific partitions
 /dev/block/by-name/protect1     /mnt/vendor/protect_f  ext4  noatime,nosuid,nodev,noauto_da_alloc,commit=1,nodelalloc  wait,check,formattable
