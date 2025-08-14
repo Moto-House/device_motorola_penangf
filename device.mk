@@ -336,8 +336,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     init.SNxxx.nfc.rc \
     init.SNxxx.se.rc \
-    init.aee.rc \
-    init.ago.rc \
     init.connectivity.common.rc \
     init.modem.rc \
     init.mt6768.rc \
