@@ -84,33 +84,6 @@
     <!--DOLBY END-->
     </effects>
 
-    <!-- Audio pre processor configurations.
-         The pre processor configuration is described in a "preprocess" element and consists in a
-         list of elements each describing pre processor settings for a given use case or "stream".
-         Each stream element has a "type" attribute corresponding to the input source used.
-         Valid types are:
-              "mic", "camcorder", "voice_recognition", "voice_communication"
-         Each "stream" element contains a list of "apply" elements indicating one effect to apply.
-         The effect to apply is designated by its name in the "effects" elements.
-    -->
- <!-- Penang code for EKPENANG4GU-2703 by denglingyu at 2024/03/06 start -->
- <postprocess>
-     <stream type="music">
-         <apply effect="dlb_music_listener"/>
-     </stream>
-     <stream type="ring">
-         <apply effect="dlb_ring_listener"/>
-     </stream>
-     <stream type="alarm">
-         <apply effect="dlb_alarm_listener"/>
-     </stream>
-     <stream type="system">
-         <apply effect="dlb_system_listener"/>
-     </stream>
-     <stream type="notification">
-         <apply effect="dlb_notification_listener"/>
-     </stream>
- </postprocess>
  <!-- Penang code for EKPENANG4GU-2703 by denglingyu at 2024/03/06 end -->
         <preprocess>
             <stream type="voice_communication">
