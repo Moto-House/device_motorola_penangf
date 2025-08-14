@@ -132,7 +132,7 @@ on fs
     write /proc/sys/vm/watermark_scale_factor 20
     # Penang code for EKPENANG4G-11653 by wuzhisen at 20240228 end
     write /sys/kernel/mm/swap/vma_ra_enabled false
-    # swapon_all /vendor/fstab.enableswap
+    swapon_all /vendor/fstab.mt6768
 
 on post-fs
     write /proc/bootprof "INIT:post-fs"
