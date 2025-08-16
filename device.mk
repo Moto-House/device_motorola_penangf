@@ -65,6 +65,7 @@ PRODUCT_PACKAGES += \
     audio.usb.default
 
 PRODUCT_PACKAGES += \
+    audio_policy.stub \
     libalsautils \
     libaudiopreprocessing \
     libopus.vendor \
