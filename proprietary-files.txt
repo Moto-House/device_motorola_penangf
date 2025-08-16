@@ -18,6 +18,8 @@ vendor/etc/init/audiocmdservice_atci.rc
 vendor/etc/AudioLog_dynamic.xml
 vendor/etc/aurisys_config.xml
 vendor/etc/aurisys_config_rv.xml
+vendor/lib/hw/android.hardware.audio@6.0-impl-mediatek.so
+vendor/lib/hw/android.hardware.audio@7.0-impl-mediatek.so
 vendor/lib/hw/audio.primary.mt6768.so
 vendor/lib/hw/audio.r_submix.mt6768.so
 vendor/lib/audio_common-aidl-cpp.so
@@ -54,6 +56,8 @@ vendor/lib/libspeechparser_vendor.so
 vendor/lib/shared-file-region-aidl-cpp.so
 vendor/lib/vendor.mediatek.hardware.audio@6.1.so
 vendor/lib/vendor.mediatek.hardware.audio@7.1.so
+vendor/lib64/hw/android.hardware.audio@6.0-impl-mediatek.so
+vendor/lib64/hw/android.hardware.audio@7.0-impl-mediatek.so
 vendor/lib64/hw/audio.primary.mt6768.so
 vendor/lib64/hw/audio.r_submix.mt6768.so
 vendor/lib64/audio_common-aidl-cpp.so
@@ -451,6 +455,7 @@ vendor/lib64/soundfx/libswgamedap.so
 vendor/bin/hw/android.hardware.bluetooth@1.1-service-mediatek
 vendor/bin/autobt
 vendor/etc/init/android.hardware.bluetooth@1.1-service-mediatek.rc
+vendor/lib/hw/android.hardware.bluetooth@1.1-impl-mediatek.so
 vendor/lib/hw/vendor.mediatek.hardware.bluetooth.audio@2.2-impl.so
 vendor/lib/libbluetooth_audio_session_mediatek.so
 vendor/lib/libbluetooth_hw_test.so
@@ -461,6 +466,7 @@ vendor/lib/libbluetoothem_mtk.so
 vendor/lib/libbt-vendor.so
 vendor/lib/vendor.mediatek.hardware.bluetooth.audio@2.1.so
 vendor/lib/vendor.mediatek.hardware.bluetooth.audio@2.2.so
+vendor/lib64/hw/android.hardware.bluetooth@1.1-impl-mediatek.so
 vendor/lib64/hw/vendor.mediatek.hardware.bluetooth.audio@2.2-impl.so
 vendor/lib64/libbluetooth_audio_session_mediatek.so
 vendor/lib64/libbluetooth_hw_test.so
@@ -990,6 +996,8 @@ vendor/etc/vintf/manifest/gnss-default.xml:vendor/etc/vintf/manifest/gnss-mtk-de
 vendor/etc/vintf/manifest/gnss@2.1-service.xml:vendor/etc/vintf/manifest/gnss-mtk@2.1-service.xml
 vendor/etc/slp_conf
 vendor/lib/hw/gps.default.so
+vendor/lib64/hw/android.hardware.gnss-impl-mediatek.so
+vendor/lib64/hw/android.hardware.gnss@2.1-impl-mediatek.so
 vendor/lib64/hw/gps.default.so
 vendor/lib64/libhydra.so
 
@@ -1476,6 +1484,7 @@ vendor/lib64/vendor.mediatek.hardware.mtkradioex@3.0.so
 vendor/bin/hw/android.hardware.sensors@2.0-service.multihal-mediatek
 vendor/etc/init/android.hardware.sensors@2.0-service.multihal-mediatek.rc
 vendor/lib/libhwm.so
+vendor/lib64/hw/android.hardware.sensors@2.X-subhal-mediatek.so
 vendor/lib64/hw/sensors.mt6768.so
 vendor/lib64/libQstAlgo.so
 vendor/lib64/libhwm.so
@@ -1501,9 +1510,11 @@ vendor/etc/init/init.thermal_manager.rc
 vendor/etc/init/init.thermalloadalgod.rc
 vendor/etc/fstb.cfg
 vendor/lib/hw/android.hardware.thermal@2.0-impl.so
+vendor/lib/hw/android.hardware.thermal@2.0-impl.so
 vendor/lib/hw/thermal_hal.so
 vendor/lib/libmtcloader.so
 vendor/lib/libthermalalgo.so
+vendor/lib64/hw/android.hardware.thermal@2.0-impl.so
 vendor/lib64/hw/android.hardware.thermal@2.0-impl.so
 vendor/lib64/hw/thermal_hal.so
 vendor/lib64/libmtcloader.so
