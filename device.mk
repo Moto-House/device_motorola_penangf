@@ -315,8 +315,16 @@ PRODUCT_COPY_FILES += \
 
 # Power
 PRODUCT_PACKAGES += \
+    android.hardware.power-service.lineage-libperfmgr
+
+PRODUCT_PACKAGES += \
     android.hardware.power-V2-ndk_platform.vendor \
-    android.hardware.power@1.2.vendor
+    android.hardware.power@1.2.vendor \
+    libmtkperf_client_vendor \
+    libmtkperf_client \
+    libpowerhalwrap_vendor \
+    vendor.mediatek.hardware.mtkpower@1.2-service.stub \
+    vendor.mediatek.hardware.mtkpower@1.2.vendor
 
 # Power Off Alarm
 PRODUCT_PACKAGES += \
