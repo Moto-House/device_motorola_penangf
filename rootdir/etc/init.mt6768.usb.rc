@@ -385,6 +385,8 @@ on boot
     chown system radio /dev/ttyGS3
     chmod 0660 /dev/ttyGS3
 
+    setprop sys.usb.controller "musb-hdrc"
+
     # Set permissions for USB service
     chown root system /sys/class/typec/port0/power_role
     chown root system /sys/class/typec/port0/data_role
