@@ -362,8 +362,6 @@ on post-fs-data
     mkdir /config/usb_gadget/g1/functions/via_atc.gs0
 
 on boot
-    setprop sys.usb.configfs 2
-    setprop vendor.usb.controller "musb-hdrc"
     write /sys/class/android_usb/android0/f_mtp/cpu_mask 0xF0
     chmod 0664 /sys/class/android_usb/android0/iSerial
     chown root system /sys/class/android_usb/android0/iSerial
@@ -398,6 +396,9 @@ on boot
     chmod 664 /sys/class/typec/port0/port_type
     chmod 664 /sys/class/udc/${sys.usb.controller}/device/mode
     chmod 664 /sys/class/udc/${sys.usb.controller}/device/saving
+
+    setprop sys.usb.configfs 2
+    setprop vendor.usb.controller "musb-hdrc"
 
 on charger
     mkdir /dev/usb-ffs 0775 shell shell
