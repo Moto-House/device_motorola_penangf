@@ -42,15 +42,10 @@ AB_OTA_POSTINSTALL_CONFIG += \
     FILESYSTEM_TYPE_vendor=ext4 \
     POSTINSTALL_OPTIONAL_vendor=true
 
-PRODUCT_PACKAGES += \
-    checkpoint_gc \
-    otapreopt_script
-
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio.effect@7.0-impl \
     android.hardware.audio.service \
-    android.hardware.bluetooth.audio-impl \
     android.hardware.soundtrigger@2.3-impl
 
 PRODUCT_PACKAGES +=\
