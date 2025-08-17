@@ -19,7 +19,7 @@ It was released in November 2023.
 | Camera (Front)          | 16 MP    
 
 ## Device picture
-![penangf](https://fdn2.gsmarena.com/vv/pics/motorola/motorola-moto-g23-2.jpg)
+![penangf](https://i0.wp.com/raqamitv.com/wp-content/uploads/2023/01/Untitled-2-32-500x500.png)
 
 ```
 #
