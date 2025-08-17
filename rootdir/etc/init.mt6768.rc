@@ -855,14 +855,6 @@ on property:sys.retaildemo.enabled=1
 
 on property:sys.retaildemo.enabled=0
     write sys/devices/platform/charger/tcmd_capacity_level_limited 0
-
-service factory_no_image /vendor/bin/factory
-    user root
-    group radio system wifi media gps audio bluetooth wakelock nfc
-    capabilities BLOCK_SUSPEND NET_RAW NET_ADMIN SYS_ADMIN SYS_BOOT
-    socket factory-atci stream 660 radio system
-    disabled
-    oneshot
 	
 # reset mdmode when modem crash happens in ATM
 on property:vendor.mtk.md1.status=reset

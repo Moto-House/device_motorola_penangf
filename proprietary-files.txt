@@ -1316,7 +1316,6 @@ vendor/bin/ccci_mdinit
 vendor/bin/ccci_rpcd
 vendor/bin/charon
 vendor/bin/epdg_wod
-vendor/bin/factory
 vendor/bin/gsm0710muxd
 vendor/bin/ipsec_mon
 vendor/bin/md_monitor
