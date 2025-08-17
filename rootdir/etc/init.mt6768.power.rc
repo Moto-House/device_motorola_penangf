@@ -36,8 +36,6 @@ on post-fs-data
     
 on boot
     # boot perf. tune
-    write /dev/cpuctl/system/cpu.uclamp.min 100
-    write /dev/cpuctl/system/cpu.uclamp.latency_sensitive 1
     write /dev/cpuctl/system-background/cpu.uclamp.min 100
     write /dev/cpuctl/system-background/cpu.uclamp.latency_sensitive 1
     write /dev/cpuctl/foreground/cpu.uclamp.min 100
@@ -75,8 +73,6 @@ on enable-low-power
 
     write /sys/class/devfreq/mtk-dvfsrc-devfreq/userspace/set_freq 0
 
-    write /dev/cpuctl/system/cpu.uclamp.min 0
-    write /dev/cpuctl/system/cpu.uclamp.latency_sensitive 0
     write /dev/cpuctl/system-background/cpu.uclamp.min 0
     write /dev/cpuctl/system-background/cpu.uclamp.latency_sensitive 0
     write /dev/cpuctl/foreground/cpu.uclamp.min 0
