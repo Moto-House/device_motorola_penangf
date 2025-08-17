@@ -64,6 +64,9 @@ function blob_fixup {
         vendor/lib*/hw/vendor.mediatek.hardware.pq@2.15-impl.so)
             "${PATCHELF}" --replace-needed "libutils.so" "libutils-v32.so" "${2}"
             ;;
+        vendor/lib64/libmtkcam_stdutils.so)
+            "${PATCHELF}" --replace-needed "libutils.so" "libutils-v32.so" "${2}"
+            ;;
         vendor/lib64/libmtkcam_featurepolicy.so)
             # evaluateCaptureConfiguration()
             printf '\x28\x02\x80\x52' | dd of="$2" bs=1 seek=$((0x3e828)) count=4 conv=notrunc
