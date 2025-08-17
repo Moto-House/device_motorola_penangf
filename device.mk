@@ -168,7 +168,7 @@ PRODUCT_PACKAGES += \
 
 # GNSS
 PRODUCT_PACKAGES += \
-    android.hardware.gnss-V1-ndk_platform.vendor \
+    android.hardware.gnss-V1-ndk.vendor \
     android.hardware.gnss@1.1.vendor \
     android.hardware.gnss@2.1.vendor \
     android.hardware.gnss.measurement_corrections@1.1.vendor \
@@ -196,9 +196,9 @@ PRODUCT_PACKAGES += \
 
 # Keymaster / Keymint
 PRODUCT_PACKAGES += \
-    android.hardware.security.keymint-V1-ndk_platform.vendor \
-    android.hardware.security.secureclock-V1-ndk_platform.vendor \
-    android.hardware.security.sharedsecret-V1-ndk_platform.vendor \
+    android.hardware.security.keymint-V1-ndk.vendor \
+    android.hardware.security.secureclock-V1-ndk.vendor \
+    android.hardware.security.sharedsecret-V1-ndk.vendor \
     libkeymaster_messages.vendor \
     libkeymaster_portable.vendor \
     libkeymint.vendor \
@@ -206,7 +206,6 @@ PRODUCT_PACKAGES += \
 
 # Keystore
 PRODUCT_PACKAGES += \
-    android.system.keystore2-V1-ndk_platform.vendor \
     android.hardware.hardware_keystore.xml \
     android.system.wifi.keystore@1.0.vendor \
     libcppbor_external.vendor \
@@ -242,7 +241,7 @@ PRODUCT_COPY_FILES += \
 
 # Memtrack
 PRODUCT_PACKAGES += \
-    android.hardware.memtrack-V1-ndk_platform.vendor
+    android.hardware.memtrack-V1-ndk.vendor
 
 # Neural Networks
 PRODUCT_PACKAGES += \
@@ -315,7 +314,6 @@ PRODUCT_PACKAGES += \
     android.hardware.power-service.lineage-libperfmgr
 
 PRODUCT_PACKAGES += \
-    android.hardware.power-V2-ndk_platform.vendor \
     android.hardware.power@1.2.vendor \
     libmtkperf_client_vendor \
     libmtkperf_client \

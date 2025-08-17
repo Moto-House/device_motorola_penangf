@@ -97,6 +97,14 @@ function blob_fixup {
         vendor/lib64/libcodec2_soft_ac4dec.so)
             grep -q "libstagefright_foundation-v33.so" "${2}" || "${PATCHELF}" --add-needed "libstagefright_foundation-v33.so" "${2}"
             ;;
+        vendor/lib64/hw/android.hardware.gnss-impl-mediatek.so)
+            ;&
+        vendor/bin/hw/android.hardware.gnss-service.mediatek)
+            "${PATCHELF}" --replace-needed "android.hardware.gnss-V1-ndk_platform.so" "android.hardware.gnss-V1-ndk.so" "${2}"
+            ;;
+        vendor/bin/hw/android.hardware.memtrack-service.mediatek)
+            "${PATCHELF}" --replace-needed "android.hardware.memtrack-V1-ndk_platform.so" "android.hardware.memtrack-V1-ndk.so" "${2}"
+            ;;
         vendor/lib64/libmtkcam_featurepolicy.so)
             # evaluateCaptureConfiguration()
             printf '\x28\x02\x80\x52' | dd of="$2" bs=1 seek=$((0x3e828)) count=4 conv=notrunc
