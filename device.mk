@@ -370,8 +370,11 @@ PRODUCT_PACKAGES += \
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
+    hardware/google/interfaces \
+    hardware/google/pixel \
     hardware/mediatek \
-    hardware/motorola \
+    hardware/mediatek/libmtkperf_client \
+    hardware/lineage/interfaces/power-libperfmgr \
     $(LOCAL_PATH)
 
 # Thermal
