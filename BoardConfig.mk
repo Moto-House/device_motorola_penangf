@@ -155,6 +155,13 @@ VENDOR_SECURITY_PATCH := 2025-06-05
 # Sepolicy
 include device/mediatek/sepolicy_vndr/SEPolicy.mk
 
+# SKU
+ODM_MANIFEST_SKUS += ss tsts qsqs dsds
+ODM_MANIFEST_SS_FILES := $(DEVICE_PATH)/configs/vintf/sku/manifest_ss.xml
+ODM_MANIFEST_TSTS_FILES := $(DEVICE_PATH)/configs/vintf/sku/manifest_tsts.xml
+ODM_MANIFEST_QSQS_FILES := $(DEVICE_PATH)/configs/vintf/sku/manifest_qsqs.xml
+ODM_MANIFEST_DSDS_FILES := $(DEVICE_PATH)/configs/vintf/sku/manifest_dsds.xml
+
 # Verified Boot
 BOARD_AVB_ENABLE := true
 BOARD_AVB_ALGORITHM := SHA256_RSA2048
