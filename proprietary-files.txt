@@ -753,11 +753,6 @@ vendor/lib64/libarcsoft_faceid.so
 vendor/lib64/libarcsoft_hdr_detection.so
 vendor/lib64/libarcsoft_scbokeh_video.so
 
-# CAS
-vendor/bin/hw/android.hardware.cas@1.2-service-lazy
-vendor/etc/init/android.hardware.cas@1.2-service-lazy.rc
-vendor/etc/vintf/manifest/android.hardware.cas@1.2-service-lazy.xml
-
 # Chipinfo
 vendor/bin/chipinfo
 vendor/etc/init/chipinfo_init.rc
