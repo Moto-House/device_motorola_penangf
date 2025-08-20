@@ -23,7 +23,6 @@ vendor/lib/hw/android.hardware.audio@7.0-impl-mediatek.so
 vendor/lib/hw/audio.primary.mt6768.so
 vendor/lib/hw/audio.r_submix.mt6768.so
 vendor/lib/audio_common-aidl-cpp.so
-vendor/lib/audioclient-types-aidl-cpp.so
 vendor/lib/framework-permission-aidl-cpp.so
 vendor/lib/libMtkSpeechEnh.so
 vendor/lib/lib_iir.so
@@ -60,7 +59,6 @@ vendor/lib64/hw/android.hardware.audio@7.0-impl-mediatek.so
 vendor/lib64/hw/audio.primary.mt6768.so
 vendor/lib64/hw/audio.r_submix.mt6768.so
 vendor/lib64/audio_common-aidl-cpp.so
-vendor/lib64/audioclient-types-aidl-cpp.so
 vendor/lib64/framework-permission-aidl-cpp.so
 vendor/lib64/libMtkSpeechEnh.so
 vendor/lib64/lib_iir.so
