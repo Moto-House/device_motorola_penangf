@@ -1564,7 +1564,6 @@ vendor/bin/wfca
 vendor/bin/wlan_assistant
 vendor/bin/wmt_launcher
 vendor/bin/wmt_loader
-vendor/bin/wpa_cli
 vendor/bin/wpa_cli_moto
 vendor/etc/init/init.wfca.rc
 vendor/etc/init/wlan_assistant.rc
