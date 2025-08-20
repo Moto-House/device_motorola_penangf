@@ -1,0 +1,8 @@
+subdirs = [
+    "*"
+]
+
+hidl_package_root {
+    name: "vendor.goodix",
+    path: "device/motorola/penangf/interfaces/goodix",
+}
