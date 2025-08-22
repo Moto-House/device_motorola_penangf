@@ -23,7 +23,6 @@ vendor/lib/hw/android.hardware.audio@7.0-impl-mediatek.so
 vendor/lib/hw/audio.primary.mt6768.so
 vendor/lib/hw/audio.r_submix.mt6768.so
 vendor/lib/audio_common-aidl-cpp.so
-vendor/lib/framework-permission-aidl-cpp.so
 vendor/lib/libMtkSpeechEnh.so
 vendor/lib/lib_iir.so
 vendor/lib/lib_speech_enh.so
@@ -47,11 +46,8 @@ vendor/lib/libcs_cs35l45_intf.so
 vendor/lib/libcvsd_mtk.so
 vendor/lib/libmsbc_mtk.so
 vendor/lib/librt_extamp_intf.so
-vendor/lib/libshmemcompat.so
-vendor/lib/libshmemutil.so
 vendor/lib/libspeech_enh_lib.so
 vendor/lib/libspeechparser_vendor.so
-vendor/lib/shared-file-region-aidl-cpp.so
 vendor/lib/vendor.mediatek.hardware.audio@6.1.so
 vendor/lib/vendor.mediatek.hardware.audio@7.1.so
 vendor/lib64/hw/android.hardware.audio@6.0-impl-mediatek.so
@@ -59,7 +55,6 @@ vendor/lib64/hw/android.hardware.audio@7.0-impl-mediatek.so
 vendor/lib64/hw/audio.primary.mt6768.so
 vendor/lib64/hw/audio.r_submix.mt6768.so
 vendor/lib64/audio_common-aidl-cpp.so
-vendor/lib64/framework-permission-aidl-cpp.so
 vendor/lib64/libMtkSpeechEnh.so
 vendor/lib64/lib_iir.so
 vendor/lib64/lib_speech_enh.so
@@ -85,11 +80,8 @@ vendor/lib64/libcvsd_mtk.so
 vendor/lib64/libmsbc_mtk.so
 vendor/lib64/libmtktinyxml.so
 vendor/lib64/librt_extamp_intf.so
-vendor/lib64/libshmemcompat.so
-vendor/lib64/libshmemutil.so
 vendor/lib64/libspeech_enh_lib.so
 vendor/lib64/libspeechparser_vendor.so
-vendor/lib64/shared-file-region-aidl-cpp.so
 vendor/lib64/vendor.mediatek.hardware.atci@1.0.so
 vendor/lib64/vendor.mediatek.hardware.audio@6.1.so
 vendor/lib64/vendor.mediatek.hardware.audio@7.1.so
@@ -440,11 +432,9 @@ vendor/etc/audio_param/Volume_ParamUnitDesc.xml
 
 # Audio (SoundFX)
 vendor/lib/soundfx/libdlbvol.so
-vendor/lib/soundfx/libdynproc.so
 vendor/lib/soundfx/libswdap.so
 vendor/lib/soundfx/libswgamedap.so
 vendor/lib64/soundfx/libdlbvol.so
-vendor/lib64/soundfx/libdynproc.so
 vendor/lib64/soundfx/libswdap.so
 vendor/lib64/soundfx/libswgamedap.so
 
@@ -764,7 +754,6 @@ vendor/bin/hw/vendor.mediatek.hardware.pq@2.2-service
 vendor/etc/init/android.hardware.graphics.allocator@4.0-service-mediatek.rc
 vendor/etc/init/vendor.mediatek.hardware.pq@2.2-service.rc
 vendor/lib/libaal_key.so
-vendor/lib/libflatbuffers-cpp.so
 vendor/lib/libged.so
 vendor/lib/libgpu_aux.so
 vendor/lib/libgpud.so
@@ -797,7 +786,6 @@ vendor/lib/vendor.mediatek.hardware.pq@2.8.so
 vendor/lib/vendor.mediatek.hardware.pq@2.9.so
 vendor/lib64/libaal_key.so
 vendor/lib64/libcomposer_ext.so
-vendor/lib64/libflatbuffers-cpp.so
 vendor/lib64/libged.so
 vendor/lib64/libgpu_aux.so
 vendor/lib64/libgpud.so
@@ -881,8 +869,6 @@ vendor/lib64/vendor.dolby.hardware.dms@2.0.so
 vendor/bin/hw/android.hardware.drm@1.4-service.widevine
 vendor/etc/init/android.hardware.drm@1.4-service.widevine.rc
 vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.4-service.widevine.xml
-vendor/lib64/mediacas/libclearkeycasplugin.so
-vendor/lib64/mediadrm/libmockdrmcryptoplugin.so
 vendor/lib64/mediadrm/libwvdrmengine.so
 vendor/lib64/liboemcrypto.so
 vendor/lib64/libtlcWidevineModularDrm.so
@@ -1008,7 +994,6 @@ vendor/lib64/libDefaultFpsActor.so
 vendor/lib64/libFrameRecord.so
 vendor/lib64/libNoFpsActor.so
 vendor/lib64/libOpenCL.so
-vendor/lib64/libhwc2onfbadapter.so
 vendor/lib64/libpqparamparser.so
 
 # Health
@@ -1097,16 +1082,9 @@ vendor/etc/init/vendor.mediatek.hardware.keymaster_attestation@1.1-service.rc
 vendor/lib64/hw/kmsetkey.trustonic.so;SYMLINK=vendor/lib64/hw/kmsetkey.default.so
 vendor/lib64/hw/vendor.mediatek.hardware.keymaster_attestation@1.1-impl.so
 vendor/lib64/libdecrypt.so
-vendor/lib64/libkeymaster4.so
-vendor/lib64/libkeymaster41.so
-vendor/lib64/libkeymaster4_1support.so
 vendor/lib64/libkmsetkey.so
 vendor/lib64/vendor.mediatek.hardware.keymaster_attestation@1.0.so
 vendor/lib64/vendor.mediatek.hardware.keymaster_attestation@1.1.so
-
-# Local time
-vendor/lib/hw/local_time.default.so
-vendor/lib64/hw/local_time.default.so
 
 # MDDP
 vendor/bin/hw/tetheroffloadservice
@@ -1292,10 +1270,7 @@ vendor/etc/libese-nxp.conf
 vendor/etc/libnfc-nci.conf
 vendor/etc/libnfc-nxp.conf
 vendor/etc/libnfc-nxp_RF.conf
-vendor/lib64/hw/android.hardware.nfc@1.0-impl.so
 vendor/lib64/libpn557_fw.so
-vendor/lib64/ls_client.so
-vendor/lib64/nfc_nci_nxp_snxxx.so
 
 # NVRAM
 vendor/bin/hw/vendor.mediatek.hardware.nvram@1.1-service
@@ -1567,11 +1542,9 @@ vendor/etc/init/init.wfca.rc
 vendor/etc/init/wlan_assistant.rc
 vendor/lib/libwapi.so
 vendor/lib/libwo.so
-vendor/lib/libwpa_client.so
 vendor/lib/meta_wifi_data.so
 vendor/lib64/libwifi-hal.so:vendor/lib64/libwifi-hal-mtk.so
 vendor/lib64/libwapi.so
 vendor/lib64/libwifitest.so
 vendor/lib64/libwo.so
-vendor/lib64/libwpa_client.so
 vendor/lib64/meta_wifi_data.so
