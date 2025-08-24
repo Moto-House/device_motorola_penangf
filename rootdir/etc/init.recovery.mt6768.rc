@@ -1,9 +1,3 @@
-# Modules
-on early-init
-    insmod /vendor/lib/modules/chipone9916.ko
-    insmod /vendor/lib/modules/ilitek.ko
-    insmod /vendor/lib/modules/omnivision_tcm.ko
-
 on init
     setprop sys.usb.configfs 1
     setprop sys.usb.controller "musb-hdrc"
