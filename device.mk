@@ -365,9 +365,7 @@ PRODUCT_PACKAGES += \
     init.sensor_1_0.rc \
     init_connectivity.rc \
     ueventd.mt6768.rc \
-    fstab.mt6768 \
-    fstab.mt6768.ramdisk \
-    fstab.mt6768.vendor_ramdisk
+    fstab.mt6768
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/fstab.mt6768:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.mt6768 \
