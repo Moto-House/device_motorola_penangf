@@ -97,7 +97,6 @@ BOARD_VENDOR_KERNEL_MODULES := $(wildcard $(KERNEL_PATH)/vendor/*.ko)
 AB_OTA_UPDATER := true
 AB_OTA_PARTITIONS += \
     boot \
-    dtbo \
     product \
     system \
     system_ext \
