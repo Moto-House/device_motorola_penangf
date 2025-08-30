@@ -892,6 +892,7 @@ vendor/lib64/hw/bix.fingerprint.default.so
 vendor/lib64/hw/fingerprint.fpc.default.so
 vendor/lib64/hw/gf_fingerprint.default.so
 vendor/lib64/com.fingerprints.extension@1.0.so
+vendor/lib64/vendor.egistecbix.hardware.fingerprint@4.0.so
 vendor/lib64/libgf_ca.so
 vendor/lib64/libgf_factory_test.so
 vendor/lib64/libgf_hal.so
@@ -1203,6 +1204,7 @@ vendor/etc/wfd_source_capability.csv
 vendor/lib/libdapparamstorage.so
 vendor/lib/libdynamiclog.so
 vendor/lib/libminiui.so
+vendor/lib/libpixelflinger.so
 vendor/lib/libthha.so
 vendor/lib64/jcos_client.so
 vendor/lib64/libBSTSWAD.so
@@ -1213,6 +1215,7 @@ vendor/lib64/libdeccfg.so
 vendor/lib64/libdynamiclog.so
 vendor/lib64/libfft_vendor.so
 vendor/lib64/libminiui.so
+vendor/lib64/libpixelflinger.so
 vendor/lib64/offline_processor
 vendor/lib64/se_extn_client.so
 vendor/lib64/yuv_convert
