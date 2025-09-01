@@ -207,22 +207,17 @@ PRODUCT_BOOT_JARS += \
     mediatek-telephony-base \
     mediatek-telephony-common
 
-# Keymaster / Keymint
+# Keymaster
 PRODUCT_PACKAGES += \
-    android.hardware.security.keymint-V1-ndk.vendor \
-    android.hardware.security.secureclock-V1-ndk.vendor \
-    android.hardware.security.sharedsecret-V1-ndk.vendor \
+    android.hardware.keymaster@4.1.vendor \
     libkeymaster41.vendor \
     libkeymaster4_1support.vendor \
     libsoft_attestation_cert.vendor \
-    libkeymaster_messages.vendor \
-    libkeymaster_portable.vendor \
-    libkeymint.vendor \
     libpuresoftkeymasterdevice.vendor
 
 # Keystore
 PRODUCT_PACKAGES += \
-    android.hardware.hardware_keystore.xml \
+    android.hardware.hardware_keystore.km41.xml \
     android.system.wifi.keystore@1.0.vendor \
     libcppbor_external.vendor \
     libkeystore-wifi-hidl \
