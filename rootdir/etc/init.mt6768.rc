@@ -44,6 +44,11 @@ on init
     write /proc/sys/net/core/wmem_max 8388608
     write /proc/sys/net/core/rmem_max 8388608
 
+# Logger
+    start boot_log
+    start boot_log_crash
+    start boot_log_kernel
+
 on late-init
     write /proc/bootprof "INIT:late-init"
 # enable rcu_expedited
@@ -177,6 +182,11 @@ on post-fs
 
     # allow ccci_mdinit access ccci_dump
     chown root system /proc/ccci_dump
+
+# Logger
+    start boot_log
+    start boot_log_crash
+    start boot_log_kernel
 
 on late-fs
     write /proc/bootprof "INIT:late-fs"
@@ -589,11 +599,21 @@ on post-fs-data
     chmod 660 /dev/alarm
     chown root system /dev/alarm
 
+# Logger
+    start boot_log
+    start boot_log_crash
+    start boot_log_kernel
+
 on zygote-start
     write /proc/bootprof "INIT:zygote-start"
 
 on early-boot
     write /proc/bootprof "INIT:early-boot"
+
+# Logger
+    start boot_log
+    start boot_log_crash
+    start boot_log_kernel
 
 on boot
     write /proc/bootprof "INIT:boot"
@@ -870,8 +890,33 @@ service tlcKeyboxSample_svc  /vendor/bin/tlcKeyboxSample
     disabled
     seclabel u:r:tlcKeyboxSample:s0
 
+# Logger
+service boot_log /system/bin/logcat -b all -D -f /metadata/boot_log_full.txt
+    class main
+    user root
+    group root system
+    disabled
+    oneshot
+
+service boot_log_crash /system/bin/logcat -b crash -D -f /metadata/boot_log_crash.txt
+    class main
+    user root
+    group root system
+    disabled
+    oneshot
+
+service boot_log_kernel /system/bin/logcat -b kernel -D -f /metadata/boot_log_kernel.txt
+    class main
+    user root
+    group root system
+    disabled
+    oneshot
+
 on property:sys.boot_completed=1
     start tlcKeyboxSample_svc
+    stop boot_log
+    stop boot_log_crash
+    stop boot_log_kernel
 
 #Penang code for EKPENANG4G-10941 by wuzhisen at 20240228 start
 on property:ro.boot.ramsize=8
