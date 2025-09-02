@@ -967,7 +967,6 @@ vendor/lib64/hw/libSoftGatekeeper.so;SYMLINK=vendor/lib64/hw/gatekeeper.default.
 
 # Graphics
 vendor/bin/hw/android.hardware.graphics.allocator@4.0-service-mediatek
-vendor/etc/vintf/manifest/manifest_hwcomposer.xml
 vendor/lib/egl/libGLES_mali.so;SYMLINK=vendor/lib/hw/vulkan.mt6768.so
 vendor/lib/egl/egl.cfg
 vendor/lib/egl/libGLES_meow.so
