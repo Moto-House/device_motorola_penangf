@@ -111,7 +111,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.camera.common@1.0.vendor \
     android.hardware.camera.device@3.6.vendor \
-    android.hardware.camera.provider@2.6.vendor
+    android.hardware.camera.provider@2.6.vendor \
+    libexpat.vendor
 
 PRODUCT_PACKAGES += \
     libcamera2ndk_vendor
@@ -173,6 +174,11 @@ PRODUCT_PACKAGES += \
     android.hardware.gnss@2.1.vendor \
     android.hardware.gnss.measurement_corrections@1.1.vendor \
     android.hardware.gnss.visibility_control@1.0.vendor
+
+PRODUCT_PACKAGES += \
+    libcurl.vendor \
+    libjsoncpp.vendor \
+    libsqlite.vendor
 
 # Health
 PRODUCT_PACKAGES += \
@@ -425,6 +431,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libstagefright_foundation-v33 \
     libutils-v32
+
+PRODUCT_PACKAGES += \
+    libunwindstack.vendor \
+    libutilscallstack.vendor
 
 # Wifi
 PRODUCT_PACKAGES += \
