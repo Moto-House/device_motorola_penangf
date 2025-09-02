@@ -218,6 +218,7 @@ PRODUCT_BOOT_JARS += \
 # Keymaster
 PRODUCT_PACKAGES += \
     android.hardware.keymaster@4.1.vendor \
+    libgatekeeper.vendor \
     libkeymaster41.vendor \
     libkeymaster4_1support.vendor \
     libsoft_attestation_cert.vendor \
