@@ -186,7 +186,7 @@
     <name>vendor.goodix.hardware.biometrics.fingerprint</name>
     <version>2.0-1</version>
     <interface>
-        <name>IGoodixFingerprintDaemon</name>
+        <name>IGoodixFingerprintDaemonExt</name>
         <instance>default</instance>
     </interface>
 </hal>
