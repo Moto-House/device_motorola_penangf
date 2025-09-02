@@ -4,6 +4,13 @@
 // SPDX-License-Identifier: Apache-2.0
 //
 
+// Init scripts
+sh_binary {
+    name: "init.insmod.sh",
+    src: "bin/init.insmod.sh",
+    vendor: true,
+}
+
 // Init configuration files
 prebuilt_etc {
     name: "init.SNxxx.nfc.rc",
@@ -30,6 +37,13 @@ prebuilt_etc {
     name: "init.connectivity.common.rc",
     src: "etc/init.connectivity.common.rc",
     sub_dir: "init/hw",
+    vendor: true,
+}
+
+
+prebuilt_etc {
+    name: "init.insmod.mt6768.cfg",
+    src: "etc/init.insmod.mt6768.cfg",
     vendor: true,
 }
 

@@ -1198,7 +1198,6 @@ vendor/etc/bstconfig/BSTSWADParamList.cfg
 vendor/etc/bstconfig/BSTSWAD_Calib.bin
 vendor/etc/bstconfig/BSTSWAD_Calib1.bin
 vendor/etc/bstconfig/BSTSWAD_Calib2.bin
-vendor/etc/init.insmod.mt6768.cfg
 vendor/etc/logo.bin
 vendor/etc/wfd_source_capability.csv
 vendor/lib/libdapparamstorage.so

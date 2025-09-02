@@ -352,6 +352,8 @@ PRODUCT_PACKAGES += \
     init.SNxxx.nfc.rc \
     init.SNxxx.se.rc \
     init.connectivity.common.rc \
+    init.insmod.mt6768.cfg \
+    init.insmod.sh \
     init.modem.rc \
     init.mt6768.rc \
     init.mt6768.power.rc \
