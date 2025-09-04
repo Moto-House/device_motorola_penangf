@@ -132,7 +132,7 @@
     <hal format="hidl">
         <name>vendor.goodix.hardware.biometrics.fingerprint</name>
         <transport>hwbinder</transport>
-        <fqname>@2.1::IGoodixFingerprintDaemonExt/default</fqname>
+        <fqname>@2.1::IGoodixFingerprintDaemon/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.mediatek.hardware.apmonitor</name>

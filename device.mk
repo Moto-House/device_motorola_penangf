@@ -164,7 +164,6 @@ PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.1-service.penangf
 
 PRODUCT_PACKAGES += \
-    libvendor.goodix.hardware.biometrics.fingerprint@2.1.vendor \
     android.hardware.biometrics.face@1.0.vendor:64
 
 # Gatekeeper
