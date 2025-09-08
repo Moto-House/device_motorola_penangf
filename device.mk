@@ -339,15 +339,7 @@ PRODUCT_COPY_FILES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power-service.lineage-libperfmgr
-
-PRODUCT_PACKAGES += \
-    android.hardware.power@1.2.vendor \
-    libmtkperf_client_vendor \
-    libmtkperf_client \
-    libpowerhalwrap_vendor \
-    vendor.mediatek.hardware.mtkpower@1.2-service.stub \
-    vendor.mediatek.hardware.mtkpower@1.2.vendor
+    android.hardware.power-service-mediatek
 
 # Power Off Alarm
 PRODUCT_PACKAGES += \
@@ -411,8 +403,6 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/google/interfaces \
     hardware/google/pixel \
     hardware/mediatek \
-    hardware/mediatek/libmtkperf_client \
-    hardware/lineage/interfaces/power-libperfmgr \
     $(LOCAL_PATH)
 
 # Thermal
