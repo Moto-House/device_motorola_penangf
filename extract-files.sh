@@ -108,6 +108,9 @@ function blob_fixup {
         vendor/bin/hw/android.hardware.memtrack-service.mediatek)
             "${PATCHELF}" --replace-needed "android.hardware.memtrack-V1-ndk_platform.so" "android.hardware.memtrack-V1-ndk.so" "${2}"
             ;;
+        vendor/bin/hw/vendor.mediatek.hardware.mtkpower@1.0-service)
+            "${PATCHELF}" --replace-needed "android.hardware.power-V2-ndk_platform.so" "android.hardware.power-V2-ndk.so" "${2}"
+            ;;
         vendor/lib64/libvendor.goodix.hardware.biometrics.fingerprint@2.1.so)
             "${PATCHELF}" --replace-needed "libhidlbase.so" "libhidlbase-v32.so" "${2}"
             ;;
