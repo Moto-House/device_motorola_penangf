@@ -422,12 +422,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.thermal@2.0.vendor
 
-# USB
-$(call soong_config_set,android_hardware_mediatek_usb,audio_accessory_supported,true)
 
+# USB
 PRODUCT_PACKAGES += \
-    android.hardware.usb-service.mediatek \
-    android.hardware.usb.gadget-service.mediatek
+    android.hardware.usb@1.3.vendor \
+    android.hardware.usb.gadget@1.1.vendor
 
 # Vibrator
 TARGET_VIBRATOR_SUPPORTS_EFFECTS := true
