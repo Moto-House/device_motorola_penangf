@@ -191,6 +191,9 @@ PRODUCT_PACKAGES += \
     android.hardware.health-service.mediatek \
     android.hardware.health-service.mediatek-recovery
 
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/org.lineageos.health.excluded.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/org.lineageos.health.excluded.xml
+
 # HIDL
 PRODUCT_PACKAGES += \
     android.hidl.base@1.0 \
