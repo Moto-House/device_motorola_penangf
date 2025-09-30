@@ -1004,6 +1004,7 @@ vendor/lib64/libpqparamparser.so
 # Health
 vendor/bin/fuelgauged
 vendor/etc/init/fuelgauged_init.rc
+vendor/lib/libfgauge_gm30.so
 vendor/lib64/libfgauge_gm30.so
 
 # IMS
