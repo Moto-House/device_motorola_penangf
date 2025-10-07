@@ -883,13 +883,6 @@ on property:vendor.mtk.md1.status=reset
 on property:persist.vendor.mediatek.fast_charging.support=*
     write /sys/devices/platform/charger/fast_chg_indicator ${persist.vendor.mediatek.fast_charging.support}
 
-service tlcKeyboxSample_svc  /vendor/bin/tlcKeyboxSample
-    user shell
-    group system sdcard_rw media_rw sdcard_r
-    oneshot
-    disabled
-    seclabel u:r:tlcKeyboxSample:s0
-
 # Logger
 service boot_log /system/bin/logcat -b all -D -f /metadata/boot_log_full.txt
     class main
@@ -913,7 +906,6 @@ service boot_log_kernel /system/bin/logcat -b kernel -D -f /metadata/boot_log_ke
     oneshot
 
 on property:sys.boot_completed=1
-    start tlcKeyboxSample_svc
     stop boot_log
     stop boot_log_crash
     stop boot_log_kernel
