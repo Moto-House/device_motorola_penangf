@@ -298,6 +298,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     CarrierConfigOverlayPenangf \
     FrameworksResOverlayPenangf \
+    SettingsResOverlayPenangf \
     SystemUIOverlayPenangf \
     TelephonyOverlayPenangf \
     WifiResOverlayPenangf
