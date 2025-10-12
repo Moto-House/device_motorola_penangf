@@ -112,6 +112,8 @@ function blob_fixup {
             "${PATCHELF}" --replace-needed "android.hardware.power-V2-ndk_platform.so" "android.hardware.power-V2-ndk.so" "${2}"
             ;;
         vendor/lib64/libvendor.goodix.hardware.biometrics.fingerprint@2.1.so)
+            ;&
+        vendor/lib64/vendor.egistecbix.hardware.fingerprint@4.0.so)
             "${PATCHELF}" --replace-needed "libhidlbase.so" "libhidlbase_shim.so" "${2}"
             ;;
         vendor/lib64/libmtkcam_featurepolicy.so)
