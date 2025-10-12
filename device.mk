@@ -280,12 +280,15 @@ PRODUCT_PACKAGES += \
 
 # NFC
 PRODUCT_PACKAGES += \
-    android.hardware.nfc_snxxx@1.2-service \
     com.android.nfc_extras \
+    ls_client \
     libchrome.vendor \
     NfcNci \
+    nfc_nci_nxp_snxxx \
     SecureElement \
-    Tag
+    Tag \
+    vendor.nxp.nxpese@1.0 \
+    vendor.nxp.nxpnfc@2.0
 
 PRODUCT_PACKAGES += \
     android.hardware.nfc@1.2.vendor \
