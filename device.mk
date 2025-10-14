@@ -287,8 +287,8 @@ PRODUCT_PACKAGES += \
     nfc_nci_nxp_snxxx \
     SecureElement \
     Tag \
-    vendor.nxp.nxpese@1.0 \
-    vendor.nxp.nxpnfc@2.0
+    vendor.nxp.nxpese@1.0.vendor \
+    vendor.nxp.nxpnfc@2.0.vendor
 
 PRODUCT_PACKAGES += \
     android.hardware.nfc@1.2.vendor \
