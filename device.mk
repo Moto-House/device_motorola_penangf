@@ -300,7 +300,6 @@ PRODUCT_PACKAGES += \
     FrameworksResOverlayPenangf \
     SettingsResOverlayPenangf \
     SystemUIOverlayPenangf \
-    TelephonyOverlayPenangf \
     WifiResOverlayPenangf
 
 DEVICE_PACKAGE_OVERLAYS += \
