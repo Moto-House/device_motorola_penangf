@@ -284,7 +284,6 @@ PRODUCT_PACKAGES += \
     ls_client \
     libchrome.vendor \
     NfcNci \
-    nfc_nci_nxp_snxxx \
     SecureElement \
     Tag \
     vendor.nxp.nxpese@1.0.vendor \

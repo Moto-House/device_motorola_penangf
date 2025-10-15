@@ -1282,6 +1282,7 @@ vendor/etc/libese-nxp.conf
 vendor/etc/libnfc-nci.conf
 vendor/etc/libnfc-nxp.conf
 vendor/etc/libnfc-nxp_RF.conf
+vendor/lib64/nfc_nci_nxp_snxxx.so:vendor/lib64/nfc_nci_nxp_snxxx-moto.so
 vendor/lib64/libpn557_fw.so
 
 # NVRAM
