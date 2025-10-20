@@ -1274,6 +1274,7 @@ vendor/lib64/libnir_neon_driver_ndk.mtk.vndk.so
 vendor/lib64/libtflite_mtk.so
 
 # NFC
+system/framework/com.nxp.nfc.jar
 vendor/bin/hw/android.hardware.nfc_snxxx@1.2-service
 vendor/bin/hw/android.hardware.secure_element@1.2-service-mediatek
 vendor/etc/init/android.hardware.nfc_snxxx@1.2-service.rc
