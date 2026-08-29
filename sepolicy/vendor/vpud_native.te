@@ -1,0 +1,3 @@
+# VPU Daemon
+get_prop(vpud_native, vendor_default_prop)
+r_dir_file(vpud_native, sysfs_dt_firmware_android)

@@ -1,0 +1,19 @@
+# Dolby DMS HAL Service
+type hal_dms_default, domain;
+type hal_dms_default_exec, exec_type, vendor_file_type, file_type;
+
+init_daemon_domain(hal_dms_default)
+
+hwbinder_use(hal_dms_default)
+get_prop(hal_dms_default, hwservicemanager_prop)
+add_hwservice(hal_dms_default, hal_dms_hwservice)
+
+# Audio stack bindings
+allow audioserver hal_dms_hwservice:hwservice_manager find;
+binder_call(audioserver, hal_dms_default)
+
+allow hal_audio_default hal_dms_hwservice:hwservice_manager find;
+binder_call(hal_audio_default, hal_dms_default)
+
+binder_call(hal_dms_default, audioserver)
+binder_call(hal_dms_default, hal_audio_default)

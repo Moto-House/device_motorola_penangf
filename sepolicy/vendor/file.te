@@ -1,0 +1,6 @@
+# Vendor debug partition
+type kdebuginfo_block_device, dev_type;
+type kdebuginfo_data_file, file_type;
+
+# Camera sysfs nodes
+type sysfs_camera_dbg, sysfs_type, fs_type;

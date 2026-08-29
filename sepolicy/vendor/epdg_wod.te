@@ -1,0 +1,3 @@
+# MTK ePDG Wireless Offload Daemon
+allow epdg_wod self:udp_socket { create ioctl };
+allowxperm epdg_wod self:udp_socket ioctl { 0x8914 0x8916 0x8922 };

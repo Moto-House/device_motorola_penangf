@@ -1,0 +1,2 @@
+# FSCK on debug partition
+allow fsck kdebuginfo_block_device:blk_file { getattr ioctl open read write };

@@ -1,0 +1,8 @@
+# Fingerprint
+vendor.fingerprint.name                     u:object_r:vendor_fingerprint_name_prop:s0
+
+# Early vendor init properties
+ro.mtk_cam_stereo_camera_support            u:object_r:vendor_mtk_camera_prop:s0
+ro.mtk_key_manager_support                  u:object_r:vendor_mtk_default_prop:s0
+ro.telephony.sim.count                      u:object_r:telephony_config_prop:s0
+power.battery_input.overcharge_suspended    u:object_r:vendor_default_prop:s0

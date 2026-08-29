@@ -1,0 +1,49 @@
+# HAL Client bindings
+hal_client_domain(system_app, hal_audio)
+hal_client_domain(system_app, hal_bootctl)
+hal_client_domain(system_app, hal_gnss)
+hal_client_domain(system_app, hal_health)
+hal_client_domain(system_app, hal_light)
+hal_client_domain(system_app, hal_memtrack)
+hal_client_domain(system_app, hal_vibrator)
+
+# System IPC bindings
+binder_call(system_app, storaged)
+binder_call(system_app, system_suspend)
+binder_call(system_app, wificond)
+
+# Suppress Treble-restricted binder calls
+dontaudit system_app netd:binder { call transfer };
+
+# Suppress restricted system services
+dontaudit system_app {
+  system_suspend_control_service
+  system_suspend_control_internal_service
+  tracingproxy_service
+}:service_manager find;
+
+# Suppress capability drops in system daemons
+dontaudit {
+  adbd
+  adbroot
+  atrace
+  gsid
+  misctrl
+  profcollectd
+} self:capability { dac_override dac_read_search };
+
+# Suppress property and SP-HAL read probes
+dontaudit audioserver vendor_default_prop:file { open read getattr map };
+dontaudit cameraserver vendor_default_prop:file { open read getattr map };
+dontaudit coredomain same_process_hal_file:file { read open getattr map };
+dontaudit init debugfs_mmc:file { read setattr };
+dontaudit logpersist metadata_file:dir { read search };
+
+# Suppress untrusted and platform app probe noise
+dontaudit {
+  permissioncontroller_app
+  untrusted_app_all
+} sysfs_dt_firmware_android:dir search;
+
+dontaudit untrusted_app_all overlay_service:service_manager find;
+dontaudit untrusted_app_all self:netlink_route_socket { bind nlmsg_readpriv };

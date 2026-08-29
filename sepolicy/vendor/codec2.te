@@ -1,0 +1,11 @@
+# Dolby Codec2 Service
+type hal_codec2_default, domain;
+type hal_codec2_default_exec, exec_type, vendor_file_type, file_type;
+
+init_daemon_domain(hal_codec2_default)
+hal_server_domain(hal_codec2_default, hal_codec2)
+
+allow hal_codec2_default vndbinder_device:chr_file { ioctl map open read write };
+allow hal_codec2_default dmabuf_system_heap_device:chr_file { getattr open read };
+allow hal_codec2_default vendor_file:file { execute open read };
+allow hal_codec2_default same_process_hal_file:file { execute map open read };

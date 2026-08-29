@@ -1,0 +1,2 @@
+# Lights HAL
+allow hal_light_default hal_light_service:service_manager { add find };

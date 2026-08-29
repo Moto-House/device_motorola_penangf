@@ -1,0 +1,11 @@
+# Cameraserver heap access
+allow cameraserver dmabuf_system_secure_heap_device:chr_file { ioctl open read };
+
+# MTK Camera HAL
+allow mtk_hal_camera sysfs_camera_dbg:dir search;
+allow mtk_hal_camera sysfs_camera_dbg:file { getattr open read };
+allow mtk_hal_camera unlabeled:filesystem getattr;
+r_dir_file(mtk_hal_camera, sysfs_type)
+
+get_prop(mtk_hal_camera, graphics_config_prop)
+get_prop(mtk_hal_camera, graphics_config_writable_prop)

@@ -1,0 +1,14 @@
+# Dolby DMS
+vendor.dolby.hardware.dms::IDms                                              u:object_r:hal_dms_hwservice:s0
+
+# NXP NFC
+vendor.nxp.nxpnfc::INxpNfc                                                   u:object_r:nxpnfc_hwservice:s0
+
+# MTK Face Unlock
+vendor.mediatek.hardware.face::IExtBiometricsFace                            u:object_r:hal_face_hwservice:s0
+
+# Fingerprint Extensions
+com.fingerprints.extension::IFingerprintSensorTest                           u:object_r:fpc_ext_hwservice:s0
+vendor.egistecbix.hardware.fingerprint::IBiometricsFingerprintBix            u:object_r:hal_fingerprint_hwservice:s0
+vendor.goodix.hardware.biometrics.fingerprint::IGoodixFingerprintDaemon      u:object_r:hal_fingerprint_hwservice:s0
+vendor.goodix.hardware.biometrics.fingerprint::IGoodixFingerprintDaemonExt   u:object_r:hal_fingerprint_hwservice:s0

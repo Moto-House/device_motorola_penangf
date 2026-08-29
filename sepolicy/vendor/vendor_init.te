@@ -1,0 +1,8 @@
+# Vendor Init
+allow vendor_init kdebuginfo_data_file:dir { getattr open read search };
+allow vendor_init proc:file write;
+
+get_prop(vendor_init, vendor_default_prop)
+set_prop(vendor_init, telephony_config_prop)
+set_prop(vendor_init, vendor_mtk_camera_prop)
+set_prop(vendor_init, vendor_mtk_default_prop)

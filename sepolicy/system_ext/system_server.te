@@ -1,0 +1,2 @@
+# Suppress sysfs probe noise
+dontaudit system_server sysfs:file { getattr open read };

@@ -1,0 +1,17 @@
+# HAL services
+/vendor/bin/hw/android\.hardware\.biometrics\.fingerprint.*    u:object_r:hal_fingerprint_default_exec:s0
+/vendor/bin/hw/android\.hardware\.lights-service\.penangf      u:object_r:hal_light_default_exec:s0
+/vendor/bin/hw/android\.hardware\.nfc.*                        u:object_r:hal_nfc_default_exec:s0
+/vendor/bin/hw/vendor\.mediatek\.hardware\.face@1\.0-service   u:object_r:hal_face_default_exec:s0
+/vendor/bin/hw/vendor\.dolby\.hardware\.dms@2\.0-service       u:object_r:hal_dms_default_exec:s0
+/vendor/bin/hw/vendor\.dolby\.media\.c2@1\.0-service           u:object_r:hal_codec2_default_exec:s0
+
+# Character devices
+/dev/fpc1020                                                   u:object_r:fingerprint_device:s0
+/dev/esfp0                                                     u:object_r:fingerprint_device:s0
+/dev/pn557                                                     u:object_r:nfc_device:s0
+
+# Block devices
+/dev/block/by-name/kdebuginfo                                  u:object_r:kdebuginfo_block_device:s0
+/dev/block/platform/bootdevice/by-name/kdebuginfo              u:object_r:kdebuginfo_block_device:s0
+/dev/block/mmcblk0p48                                          u:object_r:kdebuginfo_block_device:s0

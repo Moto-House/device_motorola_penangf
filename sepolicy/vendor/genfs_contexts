@@ -1,0 +1,53 @@
+# Battery & Charger Controllers
+genfscon sysfs /devices/platform/11004000.i2c/i2c-7/7-006f/power_supply/sc854x-standalone            u:object_r:sysfs_batteryinfo:s0
+genfscon sysfs /devices/platform/11004000.i2c7/i2c-7/7-006f/power_supply/sc854x-standalone           u:object_r:sysfs_batteryinfo:s0
+genfscon sysfs /devices/platform/odm/odm:qc_chrg_manager/power_supply                                  u:object_r:sysfs_batteryinfo:s0
+genfscon sysfs /devices/platform/11004000.i2c7/i2c-7/7-006a/power_supply/sgm4154x-charger            u:object_r:sysfs_batteryinfo:s0
+genfscon sysfs /devices/platform/11004000.i2c/i2c-7/7-000b/regulator                                 u:object_r:sysfs_batteryinfo:s0
+
+# Nanohub Wakeup
+genfscon sysfs /devices/virtual/nanohub/nanohub/wakeup                                                 u:object_r:sysfs_wakeup:s0
+
+# Penangf Wakeup nodes under power_supply
+genfscon sysfs /devices/platform/charger/power_supply/mtk-master-charger/wakeup9                       u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/charger/power_supply/mtk-slave-charger/wakeup10                      u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/charger/power_supply/mtk-mst-div-chg/wakeup11                        u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/charger/power_supply/mtk-slv-div-chg/wakeup12                        u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/odm/odm:qc_chrg_manager/power_supply/usbqc/wakeup13                 u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/11004000.i2c/i2c-7/7-006f/power_supply/sc854x-standalone/wakeup15   u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/11004000.i2c7/i2c-7/7-006f/power_supply/sc854x-standalone/wakeup15  u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/11004000.i2c/i2c-7/7-000b/power_supply/sgm4154x-charger/wakeup18    u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/11004000.i2c7/i2c-7/7-000b/power_supply/sgm4154x-charger/wakeup18   u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/1000d000.pwrap/1000d000.pwrap:mt6358-pmic/mt6358-gauge/power_supply/battery/wakeup35 u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/1000d000.pwrap/1000d000.pwrap:mt6358-pmic/mt6358-gauge/power_supply/battery/wakeup37 u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/1000d000.pwrap/1000d000.pwrap:mt6358-pmic/mt6358-gauge/power_supply/battery/wakeup38 u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/1000d000.pwrap/1000d000.pwrap:mt6358-pmic/mt6358-gauge/power_supply/mtk-gauge/wakeup36 u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/1000d000.pwrap/1000d000.pwrap:mt6358-pmic/mt6358-gauge/power_supply/mtk-gauge/wakeup37 u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/1000d000.pwrap/1000d000.pwrap:mt6358-pmic/mt6358-gauge/power_supply/mtk-gauge/wakeup38 u:object_r:sysfs_wakeup:s0
+
+# Subsystem Wakeup Nodes
+genfscon sysfs /devices/platform/1000d000.pwrap/1000d000.pwrap:mt6358-pmic/mt6358-rtc/wakeup/wakeup33 u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/1000d000.pwrap/1000d000.pwrap:mt6358-pmic/mt6358-rtc/wakeup/wakeup   u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/10238000.gce/wakeup/wakeup226                                        u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/10238000.gce/wakeup/wakeup                                           u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/15020000.imgsys_config/wakeup/wakeup241                               u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/15020000.imgsys_config/wakeup/wakeup                                  u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/18002000.consys/wakeup/wakeup257                                      u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/18002000.consys/wakeup/wakeup                                         u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/1000d000.pwrap/1000d000.pwrap:mt6358-pmic/mt635x-auxadc/wakeup/wakeup0 u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/1000d000.pwrap/1000d000.pwrap:mt6358-pmic/mt635x-auxadc/wakeup/wakeup u:object_r:sysfs_wakeup:s0
+
+# Hardware Wakeup Sources
+genfscon sysfs /devices/platform/1000d000.pwrap/1000d000.pwrap:mt6358-pmic/mt6358-rtc/rtc/rtc0/alarmtimer.1.auto/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/fp_egistec/wakeup                                                     u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/10238000.gce_mbox/wakeup                                             u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/11004000.i2c/i2c-7/7-006f/wakeup                                      u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/11004000.i2c7/i2c-7/7-006f/wakeup                                     u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/11004000.i2c/i2c-7/7-0047/wakeup                                      u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/11004000.i2c7/i2c-7/7-0047/wakeup                                     u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/11004000.i2c/i2c-7/7-000b/wakeup                                      u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/11004000.i2c7/i2c-7/7-000b/wakeup                                     u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/trusty/wakeup                                                         u:object_r:sysfs_wakeup:s0
+
+# DeviceTree Base Node
+genfscon sysfs /firmware/devicetree/base                                                               u:object_r:sysfs_dt_firmware_android:s0

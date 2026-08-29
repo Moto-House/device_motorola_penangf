@@ -1,0 +1,2 @@
+# MTK Face Unlock HAL
+allow hal_face_default hal_face_hwservice:hwservice_manager { add find };

@@ -1,0 +1,7 @@
+# Fingerprint Sensor HAL
+allow hal_fingerprint_default fingerprint_device:chr_file { ioctl open read write };
+allow hal_fingerprint_default mnt_user_file:dir search;
+set_prop(hal_fingerprint_default, vendor_fingerprint_name_prop)
+
+# Extension services
+allow hal_fingerprint_default fpc_ext_hwservice:hwservice_manager { add find };

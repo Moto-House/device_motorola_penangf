@@ -1,0 +1,57 @@
+# Treble default prop suppressions
+dontaudit {
+  mediacodec
+  mnld
+  mtk_hal_c2
+  mtk_hal_camera
+  vpud_native
+} default_prop:file { getattr map open read };
+
+dontaudit vtservice vendor_default_prop:file { getattr map open read };
+
+# Capability drop suppressions
+dontaudit {
+  extra_free_kbytes
+  hal_wifi_supplicant_default
+} self:capability { dac_override dac_read_search };
+
+# Debugging and ptrace
+dontaudit init hal_fingerprint_default:process ptrace;
+
+# Hardware probe apps, browsers and isolated services
+dontaudit untrusted_app_all {
+  mnt_vendor_file
+  proc_bus_input
+  proc_gpufreqv2
+  proc_interrupts
+  shell_test_data_file
+  sysfs_devices_block
+  sysfs_net
+}:dir { getattr open read search };
+
+dontaudit untrusted_app_all {
+  proc
+  proc_bus_input
+  proc_interrupts
+  selinuxfs
+  sysfs
+  sysfs_devices_block
+  vendor_mtk_soc_prop
+}:file { getattr map open read };
+
+dontaudit untrusted_app_all unlabeled:filesystem getattr;
+
+# Camera HAL background checks
+dontaudit mtk_hal_camera system_data_file:dir { getattr open read search };
+dontaudit mtk_hal_camera hal_configstore_ISurfaceFlingerConfigs:hwservice_manager find;
+
+# Untrusted app network sockets, services and isolated apps
+dontaudit untrusted_app_all self:netlink_route_socket { bind nlmsg_readpriv };
+dontaudit untrusted_app_all overlay_service:service_manager find;
+dontaudit isolated_app content_capture_service:service_manager find;
+
+# Suppress Treble-restricted vendor directory creation
+dontaudit vendor_init vendor_userdir_file:dir { add_name create setattr write };
+
+# Suppress DT sysfs search noise
+dontaudit untrusted_app_all sysfs_dt_firmware_android:dir search;
